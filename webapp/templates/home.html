@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        You can tweet
+    </title>
+</head>
+<body>
+    <form method="post">
+        <h1>
+            {% if contents %}
+            {{action}}: {{contents}}
+            {% else %}
+            Give me contents
+            {% endif %}
+        </h1>
+
+        <label for="contents_id">Contents</label>
+        <input id="contents_id" name="contents" type="text">
+        <input type="submit" name="action" value="tweet">
+        <input type="submit" name="action" value="reply">
+    </form>
+</body>
+</html>
